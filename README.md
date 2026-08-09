@@ -1,10 +1,13 @@
-# FSB Splash Site (Archived)
+# FSB Splash Site (public archive)
 
-Historical Styleshout FLARE + Vite/React login splash page built for Full Stack Boston (2024).
+Public archive of Full Stack Boston's **2024** marketing splash + login UI mock.
 
-Superseded by the Next.js [fullstackboston.com](https://fullstackboston.com) site. Kept for reference with CI gates (lint, vitest 100%, OSV, Semgrep).
+This is **not** a website template, starter kit, or theme for other businesses. It is the preserved source of a former FSB site for history and portfolio context. Do not copy, resell, or redistribute it as a template or drop-in design for other projects.
 
-**Live museum demo:** https://splash.fullstackboston.com (private repo; public URL). Banner + `noindex`; login is stubbed/disabled.
+**Live site today:** [fullstackboston.com](https://fullstackboston.com) (Next.js successor)  
+**Museum demo:** [splash.fullstackboston.com](https://splash.fullstackboston.com) (`noindex`; demo banner; login stubbed/disabled)
+
+Built with a period Vite/React login shell on top of a static marketing page. CI: lint, vitest (100%), OSV, Semgrep.
 
 ```bash
 npm ci
@@ -13,10 +16,7 @@ npm run test:coverage
 npm run build
 ```
 
-Deploy (fsb-03 Dockge):
+## Credits
 
-```bash
-rsync -az --omit-dir-times --exclude .git --exclude node_modules --exclude dist \
-  /opt/fsb/data/repos/fsb-splash-site/ fsb-03:/opt/stacks/fsb-splash-site/
-ssh fsb-03 "cd /opt/stacks/fsb-splash-site && docker compose up -d --build"
-```
+- Full Stack Boston / [Jonaldo Alix](https://jonaldoalix.com) — product and customization (2024)
+- Base layout originally derived from Styleshout's free FLARE landing page; this archive is a historical FSB site, not a redistribution of that resource as a template
