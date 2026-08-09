@@ -1,0 +1,9 @@
+services:
+  fsb-splash-site:
+    container_name: fsb-splash-site
+    build: .
+    image: fsb-splash-site:local
+    restart: unless-stopped
+    ports:
+      # fsb-03 Tailscale bind (see nathan docs/PORTS.md)
+      - "100.64.0.7:8097:80"

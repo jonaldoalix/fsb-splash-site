@@ -3,8 +3,9 @@ import { describe, expect, it } from "vitest";
 import App from "./App";
 
 describe("App", () => {
-  it("renders the login form shell", () => {
+  it("renders the demo banner and login shell", () => {
     render(<App />);
+    expect(screen.getByRole("status")).toHaveTextContent(/historical demo/i);
     expect(
       screen.getByRole("heading", { name: /please sign in/i }),
     ).toBeInTheDocument();
